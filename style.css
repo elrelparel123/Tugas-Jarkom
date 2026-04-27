@@ -1,143 +1,98 @@
-* {
-  font-family: "Poppins", sans-serif;
+body {
+  padding-top: 70px;
+  font-family: Arial, sans-serif;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  background: url('img/background.png') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.login {
-  min-height: 100vh;
-  padding: 20px;
-}
-
-.login-container {
-  max-width: 950px;
-  background: white;
-  width: 100%;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.header h1 {
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.header p {
-  font-size: 14px;
-  color: #737373;
-}
-
-.login-form label {
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.login-form input {
-  background: white;
-  border: 1px solid #BCBCBC;
-  border-radius: 8px;
-  font-size: 14px;
-}
-
-.sign-in,
-.signin-google {
-  width: 100%;
-  height: 44px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.25s ease; 
-  cursor: pointer;
-}
-
-.sign-in {
-  background: black;
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(to right, #0d6efd, #4dabf7);
   color: white;
-  border: none;
 }
 
-.sign-in:hover {
-  background: #333; 
-  transform: scale(1.03); 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
 }
 
-.sign-in:active {
-  transform: scale(0.98);
+/* RESPONSIVE TEXT */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 }
 
-.signin-google {
+.navbar { background-color: #000000; } 
+.navbar .nav-link { color: red; } 
+.navbar .nav-link:hover { color: #FEEB00; } 
+.navbar-brand { font-weight: 600; color: white; } 
+.navbar-brand:hover { color: #FEEB00; } 
+
+/* PROFILE CARD */
+.profile-card {
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+}
+
+/* CONTACT CARD */
+.contact-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: scale(1.03);
+}
+
+/* FOTO CONTACT */
+.contact-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* PROFILE CARD */
+.profile-card {
   background: white;
-  border: 1px solid #BCBCBC;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* AVATAR BULAT (INISIAL NAMA) */
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0d6efd, #4dabf7);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  gap: 8px;
-
+  border-radius: 50%;
+  margin: auto;
 }
 
-.signin-google img{
-    width: 18px;
+/* INFO LIST */
+.profile-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
 }
 
-.signin-google:hover {
-  background: #f9f9f9;
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.signin-google:active {
-  transform: scale(0.98);
-}
-
-@media (max-width: 576px) {
-  .sign-in,
-  .signin-google {
-    height: 48px;
-    font-size: 15px;
-  }
-}
-
-
-.login-right .carousel-item img {
-  object-fit: cover;
-  height: 100%;
-}
-
-@media (max-width: 992px) {
-  .login-container {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .login-container {
-    max-width: 100%;
-    min-height: auto;
-  }
-
-  .login-right .carousel-item img {
-    height: 250px;
-  }
-}
-
-@media (max-width: 576px) {
-  .header h1 {
-    font-size: 20px;
-  }
-
-  .signin-google img {
-    width: 16px;
-  }
-
-  .login-right .carousel-item img {
-    height: 200px;
-  }
+.profile-info li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
 }
